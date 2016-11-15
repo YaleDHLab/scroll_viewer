@@ -32,7 +32,7 @@ Once the export is complete, delete `imagetiles.html` and `ZoomifyImageViewer-mi
 └── styles.css
 ```
 
-You will need to adjust the height and width `index.html`.  Replace `WIDTH_IN_PIXELS` and `HEIGHT_IN_PIXELS` with their correct values:
+You will need to adjust the height and width in the `index.html` file.  Replace `WIDTH_IN_PIXELS` and `HEIGHT_IN_PIXELS` with their correct values:
 
 ```javascript
 	var layer = L.tileLayer.zoomify('imagetiles/{g}/{z}-{x}-{y}.jpg', {
