@@ -19,6 +19,7 @@
 <div id="scroll"></div>
 
 <script type="application/javascript">
+	     	// *** CHANGE the number of TileGroup folders here:
 		var numTileFolders = 1,
 		var map = L.map('scroll', {
         	maxZoom: 15, 
@@ -26,7 +27,7 @@
 	        attributionControl: false,
    	     	crs: L.CRS.Simple 
     	});   	
-    	// *** CHANGE the image dimensions here::
+    	// *** CHANGE the image dimensions here:
     	var layer = L.tileLayer.zoomify('imagetiles/{g}/{z}-{x}-{y}.jpg', {
 			width: WIDTH_IN_PIXELS,
 			height: HEIGHT_IN_PIXELS,
