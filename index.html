@@ -16,23 +16,21 @@
   </head>
 
 <body>
-	<div id="scroll"></div>
+<div id="scroll"></div>
 
 <script type="application/javascript">
 		var map = L.map('scroll', {
         	maxZoom: 15, 
 	        minZoom: 0,
 	        attributionControl: false,
-   	     	crs: L.CRS.Simple //Set a flat projection, as we are projecting an image
-    	});
-    	
-    	//Change the directory and dimensions here:
+   	     	crs: L.CRS.Simple 
+    	});   	
+    	// *** CHANGE the image dimensions here::
     	var layer = L.tileLayer.zoomify('imagetiles/{g}/{z}-{x}-{y}.jpg', {
 			width: 3070,
 			height: 24502,
 			attribution: ''
 		}).addTo(map);
-		// This setting ensures we're in the right area of the 'map'
 		map.fitBounds(layer.options.bounds, {
             padding: [100,100]
         });
@@ -49,9 +47,5 @@
 			separator : ', ',
 			lngFirst: true
 			}).addTo(map);
-
-		
     </script>
-
-	
 </body>
