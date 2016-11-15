@@ -19,6 +19,7 @@
 <div id="scroll"></div>
 
 <script type="application/javascript">
+		var numTileFolders = 1,
 		var map = L.map('scroll', {
         	maxZoom: 15, 
 	        minZoom: 0,
@@ -27,8 +28,8 @@
     	});   	
     	// *** CHANGE the image dimensions here::
     	var layer = L.tileLayer.zoomify('imagetiles/{g}/{z}-{x}-{y}.jpg', {
-			width: 3070,
-			height: 24502,
+			width: WIDTH_IN_PIXELS,
+			height: HEIGHT_IN_PIXELS,
 			attribution: ''
 		}).addTo(map);
 		map.fitBounds(layer.options.bounds, {
@@ -37,11 +38,11 @@
 		L.control.mousePosition(
 			{position: 'topright', 
 			 lngFormatter: function(num) {
-			 var formatted = "X: " + 128 * num + 'px';
+			 var formatted = "X: " + 16 * numTileFolders * num + 'px';
 			 return formatted;
 			},
 			latFormatter: function(num) {
-			 var formatted = "Y: " + 128 * Math.abs(num) + 'px';
+			 var formatted = "Y: " + 16 * numTileFolders * Math.abs(num) + 'px';
 			 return formatted;
 			},
 			separator : ', ',
