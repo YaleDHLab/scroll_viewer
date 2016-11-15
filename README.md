@@ -41,3 +41,7 @@ You will need to adjust the height and width in the `index.html` file.  Replace 
 			attribution: ''
 		}).addTo(map);
 ```    
+You will need to adjust the number of folders (`TileGroup0`, `TileGroup1`, etc) in the `index.html` file:
+
+	     	// *** CHANGE the number of TileGroup folders here:
+		var numTileFolders = 1,
